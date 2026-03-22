@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Odd-Even Sort Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Odd-Even Sort (Brick Sort)</h1>
+        
+        <div id="algorithm-info">
+            <div class="badges">
+                <span class="badge">O(n²) Time</span>
+                <span class="badge">O(1) Space</span>
+                <span id="phase-badge" class="badge phase-neutral">Ready</span>
+            </div>
+            <p id="status-display">Status: Generate an array to start.</p>
+        </div>
+
+        <div id="chart-container"></div>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="array-size">Size:</label>
+                <input type="range" id="array-size" min="10" max="100" value="30">
+                <span id="size-value">30</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="100" value="70">
+            </div>
+
+            <div class="button-group">
+                <button id="randomize-btn">Randomize</button>
+                <button id="sort-btn" class="primary-btn">Start Sorting</button>
+                <button id="reset-btn" disabled>Stop / Reset</button>
+                <button id="sound-btn">🔊 Sound On</button>
+            </div>
+            
+            <div class="input-group full-width">
+                <input type="text" id="custom-array" placeholder="Custom array (e.g. 45, 12, 89, 33)">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
